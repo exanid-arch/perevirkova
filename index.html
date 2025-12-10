@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Світ канцелярії</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .main-container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+
+        /* Хедер з Flexbox для вирівнювання в ряд */
+        header {
+            display: flex;              /* Елементи в рядок */
+            justify-content: center;    /* Центруємо групу елементів */
+            align-items: center;        /* Вирівнюємо по вертикалі */
+            gap: 20px;                  /* Відступ між лого і текстом */
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        h1, h2, h3 {
+            color: #004488;
+            margin: 0; /* Прибираємо зайві відступи у заголовка в хедері */
+        }
+
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 20px;
+        }
+
+        .product {
+            border: 1px solid #999;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fffaf0;
+        }
+
+        .photos {
+            text-align: center;
+        }
+
+        .photos img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border: 1px solid #000;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #cc0000;
+            margin-top: 10px;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            background-color: #004488;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .author-block {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .author-photo {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <header>
+            <img src="logo.png" alt="Логотип" class="logo">
+            <h1>Канцелярьский світ</h1>
+        </header>
+
+        <nav>
+            <a href="#home">Головна</a>
+            <a href="#assortment">Асортимент</a>
+            <a href="#calendar">Календар</a>
+            <a href="#cup">3D Чашка</a>
+            <a href="#author">Розробник</a>
+        </nav>
+
+        <section id="home">
+            <h2>Про сайт</h2>
+            <p>Вітаю! Цей сайт створений як навчальний проект. Тут я показую свої вміння працювати з графікою та кодом.</p>
+        </section>
+
+        <section id="assortment">
+            <h2>Асортимент продукції</h2>
+            <p>Тут представлені фото товарів: оригінал та обробка у Photoshop.</p>
+
+            <div class="product">
+                <h3>1. Ручка гелева</h3>
+                <div class="photos">
+                    <img src="pen.jpg" alt="Оригінал">
+                    <img src="pen_red.png" alt="Обробка">
+                </div>
+                <p>Опис: Синя гелева ручка, зручна для письма.</p>
+                <p class="price">Ціна: 25 грн</p>
+            </div>
+
+            <div class="product">
+                <h3>2. Лінійка</h3>
+                <div class="photos">
+                    <img src="measur.png" alt="Оригінал">
+                    <img src="measur_red.png" alt="Обробка">
+                </div>
+                <p>Опис: Деревяна лінійка 15 см.</p>
+                <p class="price">Ціна: 15 грн</p>
+            </div>
+
+            <div class="product">
+                <h3>3. Чашка для олівців</h3>
+                <div class="photos">
+                    <img src="cup.jpg" alt="Оригінал">
+                    <img src="cup_red.png" alt="Обробка">
+                </div>
+                <p>Опис: Органайзер для робочого столу.</p>
+                <p class="price">Ціна: 150 грн</p>
+            </div>
+
+            <div class="product">
+                <h3>4. Точилка</h3>
+                <div class="photos">
+                    <img src="toch.png" alt="Оригінал">
+                    <img src="toch_red.png" alt="Обробка">
+                </div>
+                <p>Опис: Точилка з контейнером.</p>
+                <p class="price">Ціна: 40 грн</p>
+            </div>
+
+            <div class="product">
+                <h3>5. Олівець</h3>
+                <div class="photos">
+                    <img src="pencil.jpg" alt="Оригінал">
+                    <img src="pencil_red.png" alt="Обробка">
+                </div>
+                <p>Опис: Простий олівець HB.</p>
+                <p class="price">Ціна: 10 грн</p>
+            </div>
+        </section>
+
+        <section id="calendar">
+            <h2>Календар знижок</h2>
+            <p>Перегляд календаря (розроблено в InDesign, формат А4):</p>
+            
+            <iframe src="calendar.pdf" class="pdf-viewer">
+                Ваш браузер не підтримує перегляд PDF. Будь ласка, завантажте файл.
+            </iframe>
+
+            <p style="margin-top: 15px;">
+                Якщо календар не відображається або ви хочете завантажити оригінал:
+                <br>
+                <a href="files/calendar.idml" class="btn">Завантажити файл .IDML (оригінал)</a>
+                <a href="files/calendar.pdf" class="btn" download>Завантажити файл .PDF</a>
+            </p>
+        </section>
+
+        <section id="cup">
+            <h2>Модель чашки (3D Max)</h2>
+            <div style="text-align: center;">
+                <img src="cup_render.png" alt="3D Чашка" style="width: 50%;">
+            </div>
+        </section>
+
+        <section id="author">
+            <h2>Розробник сайту</h2>
+            <div class="author-block">
+                <img src="author.jpg" alt="Я" class="author-photo">
+                <div>
+                    <h3>Баранишин Максим</h3>
+                    <p>Студент групи №45</p>
+                    <p>Сайт розроблено самостійно з використанням HTML та CSS.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2025 канцелярський світ
+    </footer>
+
+</body>
+</html>
